@@ -1,10 +1,10 @@
-class Run
+class Drive
 {
 	public static void main(String[] a)
 	{
-		DogClass ob1 = new DogClass();
+		CarClass ob1 = new CarClass();
 		ob1.display();
-		CatClass ob2 = new CatClass();
+		BusClass ob2 = new BusClass();
 		ob2.display();
 	}
 }

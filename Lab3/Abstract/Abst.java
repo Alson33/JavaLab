@@ -1,26 +1,26 @@
-abstract class Place
+abstract class Building
 {
-	abstract void landScape();
-	abstract boolean haveSnow();
+	abstract void Style();
+	abstract boolean haveBalcoony();
 }
 
-class MountainClass extends Place
+class WesternStyle extends Building
 {
 	//overRidding the abstract class
-	void landScape(){
-		System.out.println("It has high landScape");
+	void Style(){
+		System.out.println("It has Floors");
 	}
 
-	boolean haveSnow()
+	boolean haveBalcoony()
 	{
 		return true;
 	}
 }
 
 // Multilevel inheritance
-class HillClass extends MountainClass
+class EasternStyle extends WesternStyle
 {
-	boolean haveSnow()
+	boolean haveBalcoony()
 	{
 		return false;
 	}
@@ -29,14 +29,14 @@ class HillClass extends MountainClass
 class Abst
 {
 	public static void main(String[] args) {
-		HillClass obj1 = new HillClass();
-		obj1.landScape();
+		EasternStyle obj1 = new EasternStyle();
+		obj1.Style();
 
-			System.out.println("it has snow: " + obj1.haveSnow());
+			System.out.println("it has balcoony: " + obj1.haveBalcoony());
 
-		MountainClass obj = new MountainClass();
-		obj.landScape();
+		WesternStyle obj = new WesternStyle();
+		obj.Style();
 
-			System.out.println("it has snow: " + obj.haveSnow());
+			System.out.println("it has balcoony: " + obj.haveBalcoony());
 	}
 }
