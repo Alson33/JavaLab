@@ -1,17 +1,20 @@
-class finalDemo
+class finalKeyDemo
 {
+	// final must be static to be used inside static method
 	static final int num1 = 5;
 
-		public static void main(String[] args) {
-			System.out.println(num1);
+	final char letter;
 
-			final int num2;
-
-				finalDemo()
+// it can be initialized into a constructor
+				finalKeyDemo()
 				{
-					num2 = 4;
+					letter = 'A';
 				}
 
-					System.out.println(num2);
+		public static void main(String[] args) {
+			finalKeyDemo obj = new finalKeyDemo();
+
+			System.out.println(num1);
+			System.out.println(obj.letter);
 		}
 }
